@@ -21,3 +21,9 @@
     ```
     docker-compose up --build
     ```
+   
+## Setup PostgreSQL database
+
+```
+docker-compose run --rm polls-app python manage.py migrate
+```
