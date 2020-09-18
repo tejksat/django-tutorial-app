@@ -27,3 +27,15 @@
 ```
 docker-compose run --rm polls-app python manage.py migrate
 ```
+
+## Activating models
+
+1. Create migration files
+    ```
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm  --user $(id -u) polls-app python manage.py makemigrations polls
+    ```
+
+2. Apply migrations:
+    ```
+    docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm  --user $(id -u) polls-app python manage.py migrate
+    ```
