@@ -39,3 +39,9 @@ docker-compose run --rm polls-app python manage.py migrate
     ```
     docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm  --user $(id -u) polls-app python manage.py migrate
     ```
+
+## Creating an admin user
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml run --rm  --user $(id -u) polls-app python manage.py createsuperuser
+```
